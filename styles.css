@@ -1,0 +1,384 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f0f4f8;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+    color: #272b2e;
+  }
+
+  .hero p {
+    color: #646365;
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+
+  /* Team Section */
+  .team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+  }
+
+  .team-member {
+    margin: 0 30px;
+    text-align: center;
+  }
+
+  /* Circular Image Styling */
+  .team-member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #e0e0e0;
+  }
+
+  .team-member h3 {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #272b2e;
+  }
+
+  .team-member p {
+    font-size: 1em;
+    color: #646365;
+    margin: 10px 0;
+  }
+
+  /* LinkedIn Icon Styling */
+  .team-member a {
+    color: #0077b5;
+    text-decoration: none;
+    font-size: 1.5em;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .team-container {
+      flex-direction: column;
+    }
+
+    .team-member {
+      margin-bottom: 40px;
+    }
+  }
+
+  /* History Section */
+  .history {
+    padding: 50px 20px 100px 20px;
+    background-color: #6a6c6b;
+  }
+
+  .history h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #f9f9f9; /* Light text color for contrast */
+    margin-bottom: 40px;
+  }
+
+  .history-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  /* Text Styling */
+  .history-text {
+    flex: 1;
+    max-width: 600px;
+  }
+
+  .history-text p {
+    color: #f9f9f9; /* Light color for the text */
+    font-size: 1.2em;
+    line-height: 1.6em;
+    margin-bottom: 20px;
+  }
+
+  /* Professor Image Section */
+  .history-images {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    justify-content: center; /* Center the image and text */
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .history-images .professor-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+
+  /* Professor Name & Title Styling */
+  .professor-name {
+    font-size: 1.8em;
+    color: #f9f9f9;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .professor-title {
+    font-size: 1.2em;
+    color: #9fc2d2;
+    margin-bottom: 15px;
+  }
+
+  /* Fun Quote Section */
+  .professor-quote {
+    font-size: 1.1em;
+    color: #adb1b6;
+    font-style: italic;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .history-content {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .history-images .professor-img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  /* Dynamic Timeline Section */
+  .timeline {
+    padding: 100px 20px 200px 20px;
+    background-color: #4eb4af;
+    text-align: center;
+  }
+
+  .timeline h2 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-family: "Arial", sans-serif;
+  }
+
+  /* Horizontal Timeline Container */
+  .timeline-horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 30px;
+    margin-top: 50px;
+  }
+
+  .timeline-step {
+    text-align: center;
+    width: 18%; /* Make each step take up less space */
+  }
+
+  .timeline-step h3 {
+    font-size: 1.2em;
+    color: #0d3740;
+    margin-top: 10px;
+  }
+
+  .timeline-step p {
+    font-size: 0.9em;
+    color: #ffffff;
+    margin-top: 5px;
+  }
+
+  /* Timeline circles */
+  .circle {
+    height: 20px;
+    width: 20px;
+    background-color: #0d3740;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* Line between circles */
+  .timeline-horizontal::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 30px;
+    right: 30px;
+    height: 4px;
+    background-color: #0d3740;
+    z-index: 0;
+  }
+
+  /* Adjust for smaller screens */
+  @media (max-width: 768px) {
+    .timeline-horizontal {
+      flex-direction: column;
+      padding: 0;
+    }
+
+    .timeline-horizontal::before {
+      top: auto;
+      left: 50%;
+      right: 50%;
+      bottom: 0;
+      height: 0;
+    }
+
+    .timeline-step {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .circle {
+      margin-bottom: 20px;
+    }
+  }
+
+  .fun-fact {
+    text-align: center; /* Center the text */
+    margin: 20px 0; /* Add some spacing around the fact */
+  }
+
+  .fun-fact p {
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    font-size: 1.4em; /* Slightly larger font for emphasis */
+    color: #272b2e; /* A dark color from your palette for better readability */
+  }
+
+  /* Lessons Learned Section - New Styling */
+  .lessons-learned {
+    background-color: white; /* Very light blue for background */
+    padding: 30px 20px 120px 20px; /* More padding for breathing space */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+  }
+
+  .lessons-learned h2 {
+    color: #272b2e; /* Dark gray for heading */
+    text-align: center;
+    font-size: 2.2em; /* Larger font size for emphasis */
+    margin-bottom: 30px; /* Space below heading */
+    letter-spacing: 1px; /* Slight letter spacing for style */
+  }
+
+  .card-list {
+    list-style: none; /* Remove default list style */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Flexbox for card layout */
+    flex-wrap: wrap; /* Wrap cards for responsiveness */
+    gap: 20px; /* Gap between cards */
+    justify-content: center; /* Center align cards */
+  }
+
+  .card {
+    background-color: #ffffff; /* White background for cards */
+    border-left: 8px solid #4eb4af; /* Left border color matching palette */
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    width: 300px; /* Fixed width for uniformity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    display: flex; /* Flex for icon and text alignment */
+    align-items: center; /* Center align items vertically */
+    gap: 15px; /* Gap between icon and text */
+    transition: transform 0.3s, box-shadow 0.3s; /* Hover effect transition */
+  }
+
+  .card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+  }
+
+  .icon {
+    font-size: 2em; /* Larger icon size */
+    color: #4eb4af; /* Teal color for icons */
+  }
+
+  .card-content {
+    color: #646365; /* Dark gray text color for content */
+    font-size: 1em; /* Standard font size */
+    line-height: 1.6; /* Better readability */
+    margin: 0; /* Remove margin */
+  }
+
+  /* Future Plans Section - New Styling */
+  .future-plans {
+    background-color: #4eb4af; /* Teal background for emphasis */
+    color: #ffffff; /* White text for contrast */
+    padding: 30px;
+    margin: 20px;
+    border-radius: 16px; /* Rounded corners for a modern look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: left; /* Left-align text for a clean reading experience */
+    max-width: 600px; /* Max width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .future-plans h2 {
+    color: #272b2e; /* Dark gray color for the heading */
+    font-size: 2em; /* Larger font size for the title */
+    margin-bottom: 20px;
+  }
+
+  .future-plans p {
+    color: #f0f8ff; /* Light cyan text for readability against teal */
+    font-size: 1.1em;
+    line-height: 1.6; /* Increased line height for better readability */
+    margin-bottom: 20px; /* Space between paragraphs */
+  }
+
+  .team-signature {
+    text-align: right; /* Align signature to the right */
+    font-style: italic; /* Italicize for emphasis */
+    color: #cfe1ed; /* Lighter color to distinguish the signature */
+    font-size: 1.1em;
+  }
+
+
+  /* ######################### LAYERS ################################ */
+
+  .spacer {
+    aspect-ratio: 960/300;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.wave1 {
+    background-image: url('/static/images/wave1.svg');
+    margin-top: -250px;
+ }
+
+ .wave2 {
+    background-image: url('/static/images/layer2.svg');
+    margin-top: -400px;
+ }
+
+ .wave3 {
+    background-image: url('/static/images/layer1.svg');
+    margin-top: -400px;
+ }
+ 
