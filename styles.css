@@ -381,4 +381,30 @@
     background-image: url('/static/images/layer1.svg');
     margin-top: -400px;
  }
+
+/* Add extra padding at the bottom for smaller screens */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .hero {
+    padding-bottom: 80px;
+  }
+
+  /* Team Section */
+  .team-container {
+    padding-bottom: 80px;
+  }
+
+  /* History Section */
+  .history {
+    padding-bottom: 300px;
+  }
+
+  /* Timeline Section */
+  .timeline {
+    padding-bottom: 300px;
+  }
+
+}
+
+ 
  
