@@ -368,17 +368,17 @@
 }
 
 .wave1 {
-    background-image: url('/static/images/wave1.svg');
+    background-image: url('wave1.svg');
     margin-top: -250px;
  }
 
  .wave2 {
-    background-image: url('/static/images/layer2.svg');
+    background-image: url('layer2.svg');
     margin-top: -400px;
  }
 
  .wave3 {
-    background-image: url('/static/images/layer1.svg');
+    background-image: url('layer1.svg');
     margin-top: -400px;
  }
 
